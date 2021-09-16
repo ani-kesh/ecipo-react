@@ -7,14 +7,15 @@
   z-index: 1;
 }
 
-.contactLeft {
-  background-color: darkseagreen;
+.link {
+  color: cornflowerblue;
 }
 
 .contactRight {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  padding-top: 40px;
   padding-right: 20px;
 }
 
@@ -37,6 +38,19 @@
 .mapFrame {
   width: 600px;
   height: 500px;
+}
+
+.address,
+.socialPages {
+  width: 100%;
+}
+
+.icon {
+  color:gray;
+  margin: 0px 10px;
+}
+.icon:hover {
+  color: RGB(91, 175, 193);
 }
 
 @media only screen and (max-width: 1000px) {
