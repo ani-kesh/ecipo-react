@@ -25,8 +25,8 @@ export default function Nav() {
           {Object.values(Routes).map((fn) => {
             const { path, text } = fn();
             return !path.includes("*") ? (
-              <li>
-                <Link to={path} key={nanoid()} className={link}>
+              <li key={nanoid()}>
+                <Link to={path} className={link}>
                   {text}
                 </Link>
               </li>

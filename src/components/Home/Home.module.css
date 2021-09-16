@@ -1,0 +1,35 @@
+.home {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 1;
+}
+
+.homeLeft {
+  width: 70%;
+  background-color: darkseagreen;
+}
+
+.homeRight {
+  width: 28%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.aboutUsTitle {
+  font-size: 30px;
+}
+
+.aboutUs{
+    text-align: justify;
+}
+
+@media only screen and (max-width: 650px) {
+  .homeLeft,
+  .homeRight {
+    width: 100%;
+  }
+}

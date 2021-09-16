@@ -1,0 +1,8 @@
+.main {
+  width: 100%;
+  min-height: 80vh;
+  position: absolute;
+  top: 70px;
+  display: flex;
+  overflow-x: hidden;
+}

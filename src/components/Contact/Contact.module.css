@@ -1,0 +1,54 @@
+.contact {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.contactLeft {
+  background-color: darkseagreen;
+}
+
+.contactRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.mapouter {
+  position: relative;
+  margin: 50px;
+  text-align: right;
+  height: 500px;
+  width: 600px;
+}
+
+.gmapCanvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.mapFrame {
+  width: 600px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contactLeft,
+  .contactRight {
+    width: 100%;
+  }
+
+  .gmapCanvas,
+  .mapouter,
+  .mapFrame {
+    margin: 0;
+    width: 100%;
+  }
+}
