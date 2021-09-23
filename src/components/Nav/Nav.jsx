@@ -31,7 +31,7 @@ export default function Nav() {
                 </Link>
               </li>
             ) : (
-              <></>
+              <React.Fragment key={nanoid()}></React.Fragment>
             );
           })}
         </ul>

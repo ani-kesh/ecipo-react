@@ -7,7 +7,7 @@ export const Routes = {
   home: () => ({ path: `/`, text: "Home", component: Home }),
   works: () => ({
     path: `/our-works`,
-    text: "Our Works",
+    text: "Portfolio",
     component: OurWorks,
   }),
   contact: () => ({

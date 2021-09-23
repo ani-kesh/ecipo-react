@@ -1,0 +1,97 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.block {
+  width: 200px;
+  margin: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px 2px rgb(116, 110, 110);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+
+.blockImg {
+  width: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotateX(0deg);
+  transform-origin: top center;
+  transition: all 300ms ease-out;
+}
+
+.blockText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(235, 230, 230);
+  color: rgb(58, 57, 56);
+  text-align: center;
+  transform: rotateX(120deg);
+  transform-origin: bottom center;
+  transition: all 300ms ease-in;
+}
+
+.block:hover .blockText {
+  transform: rotateX(0deg);
+}
+
+.block:hover .blockImg {
+  transform: rotateX(-120deg);
+}
+
+.textHead {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color:  RGB(91, 175, 193);
+}
+
+.textQuote { 
+  padding: 20px 10px 0px;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+
+.subMenu {
+  width: 100%;
+  font-size: 30px;
+  color: #000;
+  font-family: Roboto Bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.subMenu span {
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #fff;
+  position: relative;
+}
+
+.subMenu:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #000;
+  float: left;
+  position: relative;
+  top: 15px;
+}
+

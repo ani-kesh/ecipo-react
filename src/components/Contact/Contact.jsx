@@ -28,8 +28,7 @@ export default function Contact() {
               className={mapFrame}
               title="map"
               id="gmapCanvas"
-              src="https://maps.google.com/maps?q=31/4%20h.hovsepian&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
+              src="https://maps.google.com/maps?q=Օդեսայի 2&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               scrolling="no"
             ></iframe>
           </div>
@@ -50,10 +49,7 @@ export default function Contact() {
                 (374)43-560-560
               </Link>
             </p>
-            <p>
-              Հասցե` &nbsp; 31/4 Հ․ Հովսեփյան,Ներքին Շենգավիթ, 0046, Երևան,
-              Հայաստան
-            </p>
+            <p>Հասցե` &nbsp; Օդեսայի 2, Շենգավիթ, 0050, Երևան, Հայաստան</p>
           </address>
         </div>
 
@@ -72,7 +68,11 @@ export default function Contact() {
             to={{ pathname: "https://www.instagram.com/myecipo/" }}
             target="_blank"
           >
-            <FontAwesomeIcon icon={faInstagramSquare} size="4x" className={icon} />
+            <FontAwesomeIcon
+              icon={faInstagramSquare}
+              size="4x"
+              className={icon}
+            />
           </Link>
         </div>
       </div>
