@@ -12,7 +12,6 @@ import {
   gmapCanvas,
   mapouter,
   mapFrame,
-  link,
   socialPages,
   address,
   icon,
