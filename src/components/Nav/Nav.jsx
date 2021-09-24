@@ -25,7 +25,7 @@ export default function Nav() {
           {Object.values(Routes).map((fn) => {
             const { path, text } = fn();
             return !path.includes("*") ? (
-              <li key={nanoid()}>
+              <li key={nanoid()} onClick={() => setToggle(false)}>
                 <Link to={path} className={link}>
                   {text}
                 </Link>

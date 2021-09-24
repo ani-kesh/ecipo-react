@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
-
 import {
   contact,
   contactLeft,
@@ -17,6 +17,10 @@ import {
   address,
   icon,
 } from "./Contact.module.css";
+
+const A = styled.a`
+  color: cornflowerblue;
+`;
 
 export default function Contact() {
   return (
@@ -39,15 +43,11 @@ export default function Contact() {
           <address>
             <p>
               Էլ․ փոստ` &nbsp;
-              <Link to="mailto:myecipo@gmail.com" className={link}>
-                myecipo@gmail.com
-              </Link>
+              <A href="mailto:myecipo@gmail.com">myecipo@gmail.com</A>
             </p>
             <p>
               Հեռախոս` &nbsp;
-              <Link to="tel:+37443560560" className={link}>
-                (374)43-560-560
-              </Link>
+              <A href="tel:+37443560560">(374)43-560-560</A>
             </p>
             <p>Հասցե` &nbsp; Օդեսայի 2, Շենգավիթ, 0050, Երևան, Հայաստան</p>
           </address>

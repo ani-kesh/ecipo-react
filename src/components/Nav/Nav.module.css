@@ -7,7 +7,7 @@
   padding: 0px 10px;
   box-shadow: grey 0px 5px 10px;
   z-index: 100;
-  background-color: white;
+  background-color: rgb(29, 22, 22);
 }
 
 .logo {
@@ -34,7 +34,7 @@
 }
 
 .link {
-  color: black;
+  color:white;
   text-align: center;
   text-decoration: none;
 }
@@ -46,14 +46,15 @@
 }
 
 .toggleIcon {
-  position: fixed;
   width: 100%;
-  top: 0;
+  position: fixed;
+  top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 10;
   display: none;
   text-align: right;
+  color:white;
 }
 
 .navMobile ul {
@@ -66,7 +67,7 @@
   top: 0px;
   left: 0;
   z-index: 20;
-  background-color: gray;
+  background-color: #000;
   margin: 0;
   animation-name: navWidth;
   animation-duration: 2s;

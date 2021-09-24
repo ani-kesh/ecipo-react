@@ -7,10 +7,6 @@
   z-index: 1;
 }
 
-.link {
-  color: cornflowerblue;
-}
-
 .contactRight {
   display: flex;
   flex-wrap: wrap;

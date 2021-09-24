@@ -4,15 +4,15 @@ import Contact from "../components/Contact/Contact";
 import Error from "../components/Error/Error";
 
 export const Routes = {
-  home: () => ({ path: `/`, text: "Home", component: Home }),
+  home: () => ({ path: `/`, text: "Գլխավոր", component: Home }),
   works: () => ({
     path: `/our-works`,
-    text: "Portfolio",
+    text: "Պորտֆոլիո",
     component: OurWorks,
   }),
   contact: () => ({
     path: `/contact`,
-    text: "Contact",
+    text: "Կապ",
     component: Contact,
   }),
   error: () => ({ path: "*", text: "Error", component: Error }),

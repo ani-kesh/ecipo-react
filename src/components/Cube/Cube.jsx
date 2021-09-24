@@ -3,7 +3,6 @@ import {
   container,
   cubeContainer,
   scene,
-  floor,
   cube,
   front,
   back,
@@ -19,7 +18,6 @@ export default function CubeLogo() {
       <div className={container}>
         <div className={cubeContainer}>
           <div className={scene}>
-            <div className={floor}></div>
             <div className={cube}>
               <div className={front}>
                 <Logo />
