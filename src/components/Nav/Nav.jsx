@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState} from "react";
+import { Link, useHistory  } from "react-router-dom";
 import { nanoid } from "nanoid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -15,11 +15,18 @@ import {
 } from "./Nav.module.css";
 
 export default function Nav() {
+  const history = useHistory();
   const [toggle, setToggle] = useState(false);
+
+  const handleLogo = () => {
+    history.push(Routes.home().path);
+  };
 
   return (
     <header className={header}>
-      <div className={logo}>Ecipo</div>
+      <div className={logo} onClick={handleLogo}>
+        Ecipo
+      </div>
       <nav className={`${toggle ? navMobile : nav}`}>
         <ul>
           {Object.values(Routes).map((fn) => {
