@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { nanoid } from "nanoid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -13,14 +12,18 @@ import {
   toggleIcon,
   navMobile,
   logo,
-  lang
+  lang,
 } from "./Nav.module.css";
 
 export default function Nav() {
-  const {  i18n,  } = useTranslation();
+  const { i18n, t } = useTranslation();
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
-  
+
+  useEffect(() => {
+    i18n.changeLanguage("en");
+  }, []);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -36,18 +39,21 @@ export default function Nav() {
       </div>
       <nav className={`${toggle ? navMobile : nav}`}>
         <ul>
-          {Object.values(Routes).map((fn) => {
-            const { path, text } = fn();
-            return !path.includes("*") ? (
-              <li key={nanoid()} onClick={() => setToggle(false)}>
-                <Link to={path} className={link}>
-                  {text}
-                </Link>
-              </li>
-            ) : (
-              <React.Fragment key={nanoid()}></React.Fragment>
-            );
-          })}
+          <li onClick={() => setToggle(false)}>
+            <Link to={Routes.home().path} className={link}>
+              {t("home")}
+            </Link>
+          </li>
+          <li onClick={() => setToggle(false)}>
+            <Link to={Routes.works().path} className={link}>
+              {t("work")}
+            </Link>
+          </li>
+          <li onClick={() => setToggle(false)}>
+            <Link to={Routes.contact().path} className={link}>
+              {t("contact")}
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className={toggleIcon}>
@@ -58,7 +64,11 @@ export default function Nav() {
         )}
       </div>
 
-      <select className={lang} onChange={(ev) => changeLanguage(ev.target.value)}>
+      <select
+        className={lang}
+        onChange={(ev) => changeLanguage(ev.target.value)}
+        value={i18n.language}
+      >
         <option value="arm">Arm</option>
         <option value="en">En</option>
         <option value="ru">Ru</option>

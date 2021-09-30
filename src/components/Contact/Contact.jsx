@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,6 +23,8 @@ const A = styled.a`
 `;
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className={contact}>
       <div className={contactLeft}>
@@ -41,14 +44,16 @@ export default function Contact() {
         <div className={address}>
           <address>
             <p>
-              Էլ․ փոստ` &nbsp;
+              {t("email")} &nbsp;
               <A href="mailto:myecipo@gmail.com">myecipo@gmail.com</A>
             </p>
             <p>
-              Հեռախոս` &nbsp;
+              {t("phone")} &nbsp;
               <A href="tel:+37443560560">(374)43-560-560</A>
             </p>
-            <p>Հասցե` &nbsp; Օդեսայի 2, Շենգավիթ, 0050, Երևան, Հայաստան</p>
+            <p>
+              {t("address")} &nbsp; {t("addressText")}
+            </p>
           </address>
         </div>
 

@@ -8,5 +8,8 @@
   "phone": "Phone:",
   "address": "Address:",
   "addressText": "Odessa 2, Shengavit, 0050, Yerevan, Armenia",
-  "slogan": "QUALITATIVE AND ON TIME"
+  "slogan": "QUALITATIVE AND ON TIME",
+  "home":"Home",
+  "work":"Portfolio",
+  "contact":"Contact"
 }

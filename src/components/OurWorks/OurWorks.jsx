@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { nanoid } from "nanoid";
 import {
   container,
@@ -11,12 +12,13 @@ import {
 } from "./OurWorks.module.css";
 
 export default function OurWorks() {
+  const { t } = useTranslation();
   const images = Array(10).fill("");
 
   return (
     <div className={container}>
       <p className={subMenu}>
-        <span>Պատուհաններ</span>
+        <span>{t("windows")}</span>
       </p>
 
       {images?.map((el, ind) => {
@@ -30,8 +32,7 @@ export default function OurWorks() {
             <div className={blockText}>
               <div className={textHead}>Ecipo</div>
               <div className={textQuote}>
-                ՈՐԱԿՅԱԼ <br /> ԵՎ <br />
-                ԺԱՄԱՆԱԿԻՆ
+              {t("slogan")}
               </div>
             </div>
           </div>
@@ -39,7 +40,7 @@ export default function OurWorks() {
       })}
 
       <p className={subMenu}>
-        <span>Դռներ</span>
+        <span>{t("doors")}</span>
       </p>
       {images.map((el, ind) => {
         return (
@@ -52,8 +53,7 @@ export default function OurWorks() {
             <div className={blockText}>
               <div className={textHead}>Ecipo</div>
               <div className={textQuote}>
-                ՈՐԱԿՅԱԼ <br /> ԵՎ <br />
-                ԺԱՄԱՆԱԿԻՆ
+                {t("slogan")}
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function OurWorks() {
       })}
 
       <p className={subMenu}>
-        <span>Լոգախցիկներ</span>
+        <span>{t("showerCabin")}</span>
       </p>
       {images.map((el, ind) => {
         return (
@@ -76,8 +76,7 @@ export default function OurWorks() {
             <div className={blockText}>
               <div className={textHead}>Ecipo</div>
               <div className={textQuote}>
-                ՈՐԱԿՅԱԼ <br /> ԵՎ <br />
-                ԺԱՄԱՆԱԿԻՆ
+              {t("slogan")}
               </div>
             </div>
           </div>
