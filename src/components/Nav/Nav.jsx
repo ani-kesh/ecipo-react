@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Routes } from "../../constants/router";
+import { Languages } from "../../constants/languages";
+import Dropdown from "../Dropdown/Dropdown";
 import {
   header,
   link,
@@ -21,7 +23,7 @@ export default function Nav() {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    i18n.changeLanguage("en");
+    i18n.changeLanguage(Languages[1].name);
   }, []);
 
   const changeLanguage = (lng) => {
@@ -63,7 +65,7 @@ export default function Nav() {
           <FontAwesomeIcon icon={faBars} onClick={() => setToggle(!toggle)} />
         )}
       </div>
-
+      <Dropdown options={Languages} selected={Languages[1].name}/>
       <select
         className={lang}
         onChange={(ev) => changeLanguage(ev.target.value)}
