@@ -24,7 +24,7 @@ export default function Nav() {
 
   useEffect(() => {
     i18n.changeLanguage(Languages[1].name);
-  }, []);
+  }, [i18n]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
