@@ -1,5 +1,5 @@
 .container {
-  min-width: 70px;
+  min-width: 50px;
   max-width: 400px;
   max-height: 200px;
   position: absolute;
@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   overflow-y: hidden;
   z-index: 100;
-  background-color: antiquewhite;
+  color: white;
 }
 
 .container div {
@@ -27,12 +27,18 @@
 .optionContainer {
   max-height: 160px;
   background-color: white;
+  color: black;
   overflow-y: auto;
   overflow-x: hidden;
+  border: 1px solid #696969;
 }
 
 .icon {
   margin-right: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
 }
 
 .option {
@@ -41,6 +47,6 @@
 }
 
 .option:hover {
-    background-color: rgb(231, 231, 248);
-    cursor: pointer;
-  }
+  background-color: rgb(231, 231, 248);
+  cursor: pointer;
+}

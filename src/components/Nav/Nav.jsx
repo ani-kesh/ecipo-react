@@ -65,8 +65,11 @@ export default function Nav() {
           <FontAwesomeIcon icon={faBars} onClick={() => setToggle(!toggle)} />
         )}
       </div>
-      <Dropdown options={Languages} selected={Languages[1].name}/>
-      <select
+      <div className={lang}>
+        <Dropdown options={Languages} selected={Languages[1].name} onSelect={changeLanguage}/>
+      </div>
+
+      {/* <select
         className={lang}
         onChange={(ev) => changeLanguage(ev.target.value)}
         value={i18n.language}
@@ -74,7 +77,7 @@ export default function Nav() {
         <option value="arm">Arm</option>
         <option value="en">En</option>
         <option value="ru">Ru</option>
-      </select>
+      </select> */}
     </header>
   );
 }

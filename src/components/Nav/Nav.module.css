@@ -33,7 +33,7 @@
 }
 
 .link {
-  color:white;
+  color: white;
   text-align: center;
   text-decoration: none;
 }
@@ -53,7 +53,7 @@
   z-index: 10;
   display: none;
   text-align: right;
-  color:white;
+  color: white;
 }
 
 .navMobile ul {
@@ -92,19 +92,16 @@
   font-size: 18px;
 }
 
-.lang{
+.lang {
   background: transparent;
-  color:white;
+  color: white;
   border: none;
   position: absolute;
   right: 10vw;
-  top:10px;
-  padding:5px ;
+  top: 10px;
+  padding: 5px;
 }
 
-.lang option {
-  color:black;
-}
 @media only screen and (max-width: 820px) {
   .nav {
     display: none;
@@ -112,5 +109,9 @@
 
   .toggleIcon {
     display: block;
+  }
+
+  .lang {
+    right: 100px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -11,15 +11,35 @@ import {
   icon,
 } from "./Dropdown.module.css";
 
-export default function Dropdown({ options, selected }) {
+export default function Dropdown({ options, selected,onSelect }) {
+  const ref = useRef();
+
   const [toggle, setToggle] = useState(false);
+  const [selectedTxt, setSelectedTxt] = useState(selected);
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (toggle && ref.current && !ref.current.contains(e.target)) {
+        setToggle(false);
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [toggle]);
+
+  const handleOption = (txt) => (ev) => {
+    onSelect(txt);
+    setSelectedTxt(txt);
+    setToggle(false);
+  };
 
   return (
-    <div className={container}>
+    <div className={container} ref={ref}>
       <div className={selectedOption}>
-        <span className={selectedText}>
-          {selected ? selected : options[0].name}
-        </span>
+        <span className={selectedText}>{selectedTxt}</span>
         {toggle ? (
           <FontAwesomeIcon
             icon={faAngleUp}
@@ -34,18 +54,16 @@ export default function Dropdown({ options, selected }) {
           />
         )}
       </div>
-      {toggle ? (
+      {toggle && (
         <div className={optionContainer}>
           {options.map(({ id, name }) => {
             return (
-              <div key={id} className={option}>
+              <div key={id} className={option} onClick={handleOption(name)}>
                 {name}
               </div>
             );
           })}
         </div>
-      ) : (
-        <></>
       )}
     </div>
   );
