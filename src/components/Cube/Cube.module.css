@@ -95,3 +95,33 @@
     transform: rotateY(360deg);
   }
 }
+
+@media only screen and (max-height: 700px) {
+  .cubeContainer {
+    font-size: 55px;
+  }
+
+  .cube {
+    height: 5em;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .cubeContainer {
+    font-size: 55px;
+  }
+
+  .cube {
+    height: 4em;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .cubeContainer {
+    font-size: 40px;
+  }
+
+  .cube {
+    height: 3.5em;
+  }
+}

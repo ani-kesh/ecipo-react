@@ -13,6 +13,7 @@ import {
 } from "./Cube.module.css";
 
 export default function CubeLogo() {
+
   return (
     <>
       <div className={container}>
