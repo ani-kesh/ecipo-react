@@ -69,7 +69,7 @@
   background-color: #000;
   margin: 0;
   animation-name: navWidth;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
 }
 
 @keyframes navWidth {

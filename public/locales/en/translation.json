@@ -9,7 +9,8 @@
   "address": "Address:",
   "addressText": "Odessa 2, Shengavit, 0050, Yerevan, Armenia",
   "slogan": "QUALITATIVE AND ON TIME",
-  "home":"Home",
-  "work":"Portfolio",
-  "contact":"Contact"
+  "home": "Home",
+  "work": "Portfolio",
+  "contact": "Contact",
+  "footerText": "© 2021 Ecipo. All rights reserved."
 }
