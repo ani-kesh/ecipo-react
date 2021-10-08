@@ -66,18 +66,12 @@ export default function Nav() {
         )}
       </div>
       <div className={lang}>
-        <Dropdown options={Languages} selected={Languages[1].name} onSelect={changeLanguage}/>
+        <Dropdown
+          options={Languages}
+          selected={Languages[1].name}
+          onSelect={changeLanguage}
+        />
       </div>
-
-      {/* <select
-        className={lang}
-        onChange={(ev) => changeLanguage(ev.target.value)}
-        value={i18n.language}
-      >
-        <option value="arm">Arm</option>
-        <option value="en">En</option>
-        <option value="ru">Ru</option>
-      </select> */}
     </header>
   );
 }
