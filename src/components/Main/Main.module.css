@@ -1,7 +1,8 @@
 .main {
   width: 100%;
-  position: absolute;
-  top: 70px;
+  min-height:85vh;
+  position: relative;
+  top: 50px;
   display: flex;
   overflow-x: hidden;
 }

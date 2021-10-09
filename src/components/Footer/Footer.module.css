@@ -1,11 +1,18 @@
 .footer {
   width: 100%;
   background-color: white;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px;
+  padding: 5px 0px;
   z-index: 60;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 650px) {
+  .footer {
+    font-size: 8px;
+  }
 }

@@ -4,5 +4,9 @@ import { footer } from "./Footer.module.css";
 export default function Footer() {
   const { t } = useTranslation();
 
-  return <div className={footer}>{t("footerText")}</div>;
+  return (
+    <footer>
+      <div className={footer}>{t("footerText")}</div>
+    </footer>
+  );
 }
